@@ -1,0 +1,32 @@
+<div class="bg">
+  <div class="img">
+    <img src="../../assets/images/prosteam_logo3.png" alt="">
+  </div>
+  <div class="noselect navTrigger" [class.active]="navTrigger" (click)="onTriggerNav()">
+    <i></i><i></i><i></i>
+  </div>
+  <nav #navEl class="nav" [class.active]="navTrigger">
+    <ul>
+      <li (click)="onNav('#home')" [class.active-path]="router.url === '/' || router.url === '/#home'"><a href="#home">Home</a></li>
+      <li (click)="onNav('#contact')" [class.active-path]="router.url === '/#contact'"><a href="#contact">Contact</a> </li>
+      <li (click)="onNav('#testimonials')" [class.active-path]="router.url === '/#testimonials'"><a href="#testimonials">Testimonials</a> </li>
+      <li (click)="onNav('#services')" [class.active-path]="router.url === '/#services'"><a href="#services">Services</a></li>
+    </ul>
+    <div class="toolbar">
+      <ul>
+        <li>
+          <a href="tel:2707594200">
+            <mat-icon aria-hidden="false">call</mat-icon>
+          </a>
+
+        </li>
+        <li>
+          <a href="mailto:justin@prosteamcarpetcleaning.com?subject=Email from Pro-Steam Website">
+            <mat-icon aria-hidden="false">email</mat-icon>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+

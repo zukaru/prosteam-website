@@ -1,0 +1,51 @@
+.bg {
+  padding-top: 10rem;
+  padding-bottom: 20rem;
+  background: var(--text-primary);
+  -webkit-user-select: none;
+  color: var(--text-secondary);
+
+}
+
+h2 {
+  font-size: 2.5rem;
+
+}
+hr {
+  margin-bottom: 5rem;
+}
+
+.my-cards {
+  position: relative;
+  background: repeating-linear-gradient(
+    var(--color-primary),
+    var(--color-primary) 25%,
+    var(--text-primary) 25%,
+    var(--text-primary) 100%);
+  border-radius: 5px;
+  margin-bottom: 5rem;
+
+  [mat-button], mat-card-header, mat-card-subtitle {
+    color: var(--text-primary);
+  }
+
+  [mat-button] {
+    margin-top: 8  rem;
+    position: absolute;
+    left: 1rem;
+    bottom: -1.7rem;
+    border: 4px solid var(--text-primary);
+    background: repeating-linear-gradient(
+      to top right,
+      var(--color-primary-light),
+      var(--color-primary));
+    height: 3rem;
+    border-radius: 7px;
+    transition: transform .4s;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+}

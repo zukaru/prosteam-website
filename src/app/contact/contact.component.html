@@ -1,0 +1,84 @@
+<div class="bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2>Contact</h2>
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-lg-6 contact-info">
+        <h4>Contact Info</h4>
+        <p><span>Phone: </span>(270) 759-4200</p>
+        <p><span>Email: </span>info@prosteamcleaning.co</p>
+      </div>
+      <div class="col-12 col-lg-6">
+
+
+        <form #form="ngForm" (ngSubmit)="onSubmit(form)" class="form-container" >
+          <h4>Submit an Estimate Inquiry</h4>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Full Name:</mat-label>
+            <input
+            required
+            matInput
+            type="text"
+            name="name"
+            id="name"
+            ngModel
+            placeholder="Your name">
+            <mat-hint>Input your first and last name</mat-hint>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Email Address:</mat-label>
+            <input
+            required
+            matInput
+            type="email"
+            name="email"
+            id="email"
+            ngModel
+            placeholder="Your email">
+            <mat-hint>Input your valid email address</mat-hint>
+          </mat-form-field>
+
+
+          <mat-form-field appearance="outline">
+            <mat-label>Phone Number:</mat-label>
+            <input
+            required
+            matInput
+            type="text"
+            name="phone"
+            id="phone"
+            ngModel
+            placeholder="Your phone">
+            <mat-hint>Phone number</mat-hint>
+          </mat-form-field>
+
+
+          <mat-form-field appearance="outline">
+            <mat-label>Message:</mat-label>
+            <textarea
+            #message
+            maxlength="500"
+            required
+            matInput
+            type="text"
+            name="message"
+            id="message"
+            ngModel
+            placeholder="Enter message"></textarea>
+            <mat-hint>Write a brief description of requested services</mat-hint>
+          </mat-form-field>
+
+          <button type="submit" [disabled]="!(!form.invalid && form.dirty)" >Submit</button>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</div>

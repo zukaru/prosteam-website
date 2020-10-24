@@ -1,0 +1,79 @@
+
+.bg {
+  margin-top: -8rem;
+  padding: 15rem 0;
+  color: var(--text-secondary);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &::before {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background:  linear-gradient(
+      var(--text-primary-trans),
+      var(--text-primary-trans) ),
+      url('../../assets/images/contact_parralax.jpg');
+    background-size: cover;
+    will-change: transform;
+    z-index: -1;
+  }
+
+}
+
+
+
+h2 {
+    font-size: 2.5rem;
+  }
+
+h4 {
+  margin-bottom: 5rem;
+}
+
+hr {
+  margin: 2.5rem 0;
+}
+
+.form-container {
+  position: relative;
+  background: var(--text-primary-trans);
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 2rem;
+
+  mat-form-field {
+    margin-bottom: 3rem;
+  }
+}
+
+.contact-info {
+  margin-bottom: 5rem;
+  font-size: 1.2rem;
+}
+
+
+button {
+  width: 40%;
+  margin-top: 2.5rem;
+  background: linear-gradient(var(--color-primary-light), var(--color-primary));
+  height: 3rem;
+  color: var(--text-primary);
+  border-radius: 10px;
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    opacity: .4;
+  }
+}
+
+
+
